@@ -1,0 +1,894 @@
+[gd_scene load_steps=26 format=2]
+
+[ext_resource path="res://wall_2.png" type="Texture" id=1]
+[ext_resource path="res://floor.png" type="Texture" id=2]
+[ext_resource path="res://wall.png" type="Texture" id=3]
+[ext_resource path="res://background.png" type="Texture" id=4]
+[ext_resource path="res://menu/titolo.png" type="Texture" id=5]
+[ext_resource path="res://credits/Credits.gd" type="Script" id=7]
+[ext_resource path="res://credits/credits_song.ogg" type="AudioStream" id=8]
+[ext_resource path="res://cutscenes/CutsceneKevin.tscn" type="PackedScene" id=9]
+[ext_resource path="res://cutscenes/Cutscene_Skeleton_1.tscn" type="PackedScene" id=10]
+[ext_resource path="res://cutscenes/Cutscene_42.tscn" type="PackedScene" id=11]
+[ext_resource path="res://cutscenes/CutsceneNecro.tscn" type="PackedScene" id=12]
+
+[sub_resource type="ConvexPolygonShape2D" id=1]
+points = PoolVector2Array( 64, 64, 32, 64, 32, 0, 64, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=2]
+points = PoolVector2Array( 64, 64, 32, 64, 32, 0, 64, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=3]
+points = PoolVector2Array( 64, 64, 32, 64, 32, 0, 64, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=4]
+points = PoolVector2Array( 64, 64, 0, 64, 0, 57, 64, 56 )
+
+[sub_resource type="ConvexPolygonShape2D" id=5]
+points = PoolVector2Array( 32, 64, 0, 64, 0, 0, 32, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=6]
+points = PoolVector2Array( 32, 64, 0, 64, 0, 0, 32, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=7]
+points = PoolVector2Array( 32, 64, 0, 64, 0, 0, 32, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=8]
+points = PoolVector2Array( 64, 64, 0, 64, 0, 32, 64, 32 )
+
+[sub_resource type="TileSet" id=9]
+0/name = "cemetery_wall_tl"
+0/texture = ExtResource( 4 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 64, 64, 64 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape = SubResource( 1 )
+0/shape_one_way = false
+0/shape_one_way_margin = 1.0
+0/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 1 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+0/z_index = 0
+1/name = "cemetery_wall_l"
+1/texture = ExtResource( 4 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 0, 128, 64, 64 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape = SubResource( 2 )
+1/shape_one_way = false
+1/shape_one_way_margin = 1.0
+1/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 2 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+1/z_index = 0
+2/name = "cemetery_wall_bl"
+2/texture = ExtResource( 4 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 0, 192, 64, 64 )
+2/tile_mode = 0
+2/occluder_offset = Vector2( 0, 0 )
+2/navigation_offset = Vector2( 0, 0 )
+2/shape_offset = Vector2( 0, 0 )
+2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+2/shape = SubResource( 3 )
+2/shape_one_way = false
+2/shape_one_way_margin = 1.0
+2/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 3 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+2/z_index = 0
+3/name = "cemetery_wall_b"
+3/texture = ExtResource( 4 )
+3/tex_offset = Vector2( 0, 0 )
+3/modulate = Color( 1, 1, 1, 1 )
+3/region = Rect2( 64, 192, 64, 64 )
+3/tile_mode = 0
+3/occluder_offset = Vector2( 0, 0 )
+3/navigation_offset = Vector2( 0, 0 )
+3/shape_offset = Vector2( 0, 0 )
+3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+3/shape = SubResource( 4 )
+3/shape_one_way = false
+3/shape_one_way_margin = 1.0
+3/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 4 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+3/z_index = 0
+4/name = "cemetery_wall_br"
+4/texture = ExtResource( 4 )
+4/tex_offset = Vector2( 0, 0 )
+4/modulate = Color( 1, 1, 1, 1 )
+4/region = Rect2( 128, 192, 64, 64 )
+4/tile_mode = 0
+4/occluder_offset = Vector2( 0, 0 )
+4/navigation_offset = Vector2( 0, 0 )
+4/shape_offset = Vector2( 0, 0 )
+4/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+4/shape = SubResource( 5 )
+4/shape_one_way = false
+4/shape_one_way_margin = 1.0
+4/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 5 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+4/z_index = 0
+5/name = "cemetery_wall_r"
+5/texture = ExtResource( 4 )
+5/tex_offset = Vector2( 0, 0 )
+5/modulate = Color( 1, 1, 1, 1 )
+5/region = Rect2( 128, 128, 64, 64 )
+5/tile_mode = 0
+5/occluder_offset = Vector2( 0, 0 )
+5/navigation_offset = Vector2( 0, 0 )
+5/shape_offset = Vector2( 0, 0 )
+5/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+5/shape = SubResource( 6 )
+5/shape_one_way = false
+5/shape_one_way_margin = 1.0
+5/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 6 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+5/z_index = 0
+6/name = "cemetery_wall_tr"
+6/texture = ExtResource( 4 )
+6/tex_offset = Vector2( 0, 0 )
+6/modulate = Color( 1, 1, 1, 1 )
+6/region = Rect2( 128, 64, 64, 64 )
+6/tile_mode = 0
+6/occluder_offset = Vector2( 0, 0 )
+6/navigation_offset = Vector2( 0, 0 )
+6/shape_offset = Vector2( 0, 0 )
+6/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+6/shape = SubResource( 7 )
+6/shape_one_way = false
+6/shape_one_way_margin = 1.0
+6/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 7 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+6/z_index = 0
+7/name = "cemetery_wall_t"
+7/texture = ExtResource( 4 )
+7/tex_offset = Vector2( 0, 0 )
+7/modulate = Color( 1, 1, 1, 1 )
+7/region = Rect2( 64, 64, 64, 64 )
+7/tile_mode = 0
+7/occluder_offset = Vector2( 0, 0 )
+7/navigation_offset = Vector2( 0, 0 )
+7/shape_offset = Vector2( 0, 0 )
+7/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+7/shape = SubResource( 8 )
+7/shape_one_way = false
+7/shape_one_way_margin = 1.0
+7/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 8 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+7/z_index = 0
+
+[sub_resource type="ConvexPolygonShape2D" id=10]
+points = PoolVector2Array( 0, 0, 64, 0, 64, 64, 0, 64 )
+
+[sub_resource type="OccluderPolygon2D" id=11]
+polygon = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=12]
+points = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
+
+[sub_resource type="TileSet" id=13]
+0/name = "void"
+0/texture = ExtResource( 3 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 0.835294, 0.262745, 0.262745, 1 )
+0/region = Rect2( 0, 0, 64, 64 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape = SubResource( 10 )
+0/shape_one_way = false
+0/shape_one_way_margin = 1.0
+0/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 10 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+0/z_index = 0
+1/name = "floor.png 1"
+1/texture = ExtResource( 2 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 0, 0, 64, 64 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape_one_way = false
+1/shape_one_way_margin = 0.0
+1/shapes = [  ]
+1/z_index = 0
+2/name = "wall_2.png 2"
+2/texture = ExtResource( 1 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 0, 0, 64, 64 )
+2/tile_mode = 0
+2/occluder_offset = Vector2( 0, 0 )
+2/occluder = SubResource( 11 )
+2/navigation_offset = Vector2( 0, 0 )
+2/shape_offset = Vector2( 0, 0 )
+2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+2/shape = SubResource( 12 )
+2/shape_one_way = false
+2/shape_one_way_margin = 1.0
+2/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 12 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+2/z_index = 0
+3/name = "grass_1"
+3/texture = ExtResource( 4 )
+3/tex_offset = Vector2( 0, 0 )
+3/modulate = Color( 1, 1, 1, 1 )
+3/region = Rect2( 0, 0, 64, 64 )
+3/tile_mode = 0
+3/occluder_offset = Vector2( 0, 0 )
+3/navigation_offset = Vector2( 0, 0 )
+3/shape_offset = Vector2( 0, 0 )
+3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+3/shape_one_way = false
+3/shape_one_way_margin = 0.0
+3/shapes = [  ]
+3/z_index = 0
+4/name = "grass_2"
+4/texture = ExtResource( 4 )
+4/tex_offset = Vector2( 0, 0 )
+4/modulate = Color( 1, 1, 1, 1 )
+4/region = Rect2( 64, 0, 64, 64 )
+4/tile_mode = 0
+4/occluder_offset = Vector2( 0, 0 )
+4/navigation_offset = Vector2( 0, 0 )
+4/shape_offset = Vector2( 0, 0 )
+4/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+4/shape_one_way = false
+4/shape_one_way_margin = 0.0
+4/shapes = [  ]
+4/z_index = 0
+5/name = "grass_3"
+5/texture = ExtResource( 4 )
+5/tex_offset = Vector2( 0, 0 )
+5/modulate = Color( 1, 1, 1, 1 )
+5/region = Rect2( 128, 0, 64, 64 )
+5/tile_mode = 0
+5/occluder_offset = Vector2( 0, 0 )
+5/navigation_offset = Vector2( 0, 0 )
+5/shape_offset = Vector2( 0, 0 )
+5/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+5/shape_one_way = false
+5/shape_one_way_margin = 0.0
+5/shapes = [  ]
+5/z_index = 0
+6/name = "floor_1"
+6/texture = ExtResource( 4 )
+6/tex_offset = Vector2( 0, 0 )
+6/modulate = Color( 1, 1, 1, 1 )
+6/region = Rect2( 192, 0, 64, 64 )
+6/tile_mode = 0
+6/occluder_offset = Vector2( 0, 0 )
+6/navigation_offset = Vector2( 0, 0 )
+6/shape_offset = Vector2( 0, 0 )
+6/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+6/shape_one_way = false
+6/shape_one_way_margin = 0.0
+6/shapes = [  ]
+6/z_index = 0
+7/name = "floor_2"
+7/texture = ExtResource( 4 )
+7/tex_offset = Vector2( 0, 0 )
+7/modulate = Color( 1, 1, 1, 1 )
+7/region = Rect2( 256, 0, 64, 64 )
+7/tile_mode = 0
+7/occluder_offset = Vector2( 0, 0 )
+7/navigation_offset = Vector2( 0, 0 )
+7/shape_offset = Vector2( 0, 0 )
+7/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+7/shape_one_way = false
+7/shape_one_way_margin = 0.0
+7/shapes = [  ]
+7/z_index = 0
+8/name = "floor_3"
+8/texture = ExtResource( 4 )
+8/tex_offset = Vector2( 0, 0 )
+8/modulate = Color( 1, 1, 1, 1 )
+8/region = Rect2( 320, 0, 64, 64 )
+8/tile_mode = 0
+8/occluder_offset = Vector2( 0, 0 )
+8/navigation_offset = Vector2( 0, 0 )
+8/shape_offset = Vector2( 0, 0 )
+8/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+8/shape_one_way = false
+8/shape_one_way_margin = 0.0
+8/shapes = [  ]
+8/z_index = 0
+
+[sub_resource type="Animation" id=14]
+resource_name = "cutscene"
+length = 38.0
+step = 1.0
+tracks/0/type = "method"
+tracks/0/path = NodePath("Objects/CutsceneKevin")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"values": [ {
+"args": [ Vector2( 512, 128 ) ],
+"method": "set_destination"
+}, {
+"args": [  ],
+"method": "set_next_destination_index"
+}, {
+"args": [  ],
+"method": "set_next_destination_index"
+}, {
+"args": [  ],
+"method": "set_next_destination_index"
+}, {
+"args": [  ],
+"method": "set_next_destination_index"
+}, {
+"args": [  ],
+"method": "set_next_destination_index"
+}, {
+"args": [  ],
+"method": "set_next_destination_index"
+}, {
+"args": [  ],
+"method": "set_next_destination_index"
+}, {
+"args": [  ],
+"method": "set_next_destination_index"
+}, {
+"args": [  ],
+"method": "set_next_destination_index"
+}, {
+"args": [  ],
+"method": "set_next_destination_index"
+}, {
+"args": [  ],
+"method": "set_next_destination_index"
+}, {
+"args": [  ],
+"method": "set_next_destination_index"
+}, {
+"args": [  ],
+"method": "set_next_destination_index"
+}, {
+"args": [  ],
+"method": "set_next_destination_index"
+}, {
+"args": [  ],
+"method": "set_next_destination_index"
+} ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath("Objects/Cutscene_Skeleton_1")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.5, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"values": [ {
+"args": [ Vector2( 640, 192 ) ],
+"method": "set_destination"
+}, {
+"args": [  ],
+"method": "set_next_destination_index"
+}, {
+"args": [  ],
+"method": "set_next_destination_index"
+}, {
+"args": [  ],
+"method": "set_next_destination_index"
+}, {
+"args": [  ],
+"method": "set_next_destination_index"
+}, {
+"args": [  ],
+"method": "set_next_destination_index"
+}, {
+"args": [  ],
+"method": "set_next_destination_index"
+}, {
+"args": [  ],
+"method": "set_next_destination_index"
+}, {
+"args": [  ],
+"method": "set_next_destination_index"
+}, {
+"args": [  ],
+"method": "set_next_destination_index"
+}, {
+"args": [  ],
+"method": "set_next_destination_index"
+}, {
+"args": [  ],
+"method": "set_next_destination_index"
+}, {
+"args": [  ],
+"method": "set_next_destination_index"
+}, {
+"args": [  ],
+"method": "set_next_destination_index"
+}, {
+"args": [  ],
+"method": "set_next_destination_index"
+}, {
+"args": [  ],
+"method": "set_next_destination_index"
+} ]
+}
+tracks/2/type = "method"
+tracks/2/path = NodePath("Objects/Cutscene_Skeleton_2")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.5, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"values": [ {
+"args": [ Vector2( 384, 192 ) ],
+"method": "set_destination"
+}, {
+"args": [  ],
+"method": "set_next_destination_index"
+}, {
+"args": [  ],
+"method": "set_next_destination_index"
+}, {
+"args": [  ],
+"method": "set_next_destination_index"
+}, {
+"args": [  ],
+"method": "set_next_destination_index"
+}, {
+"args": [  ],
+"method": "set_next_destination_index"
+}, {
+"args": [  ],
+"method": "set_next_destination_index"
+}, {
+"args": [  ],
+"method": "set_next_destination_index"
+}, {
+"args": [  ],
+"method": "set_next_destination_index"
+}, {
+"args": [  ],
+"method": "set_next_destination_index"
+}, {
+"args": [  ],
+"method": "set_next_destination_index"
+}, {
+"args": [  ],
+"method": "set_next_destination_index"
+}, {
+"args": [  ],
+"method": "set_next_destination_index"
+}, {
+"args": [  ],
+"method": "set_next_destination_index"
+}, {
+"args": [  ],
+"method": "set_next_destination_index"
+}, {
+"args": [  ],
+"method": "set_next_destination_index"
+} ]
+}
+tracks/3/type = "method"
+tracks/3/path = NodePath("Objects/Cutscene_Skeleton_3")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0.5, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"values": [ {
+"args": [ Vector2( 576, 384 ) ],
+"method": "set_destination"
+}, {
+"args": [  ],
+"method": "set_next_destination_index"
+}, {
+"args": [  ],
+"method": "set_next_destination_index"
+}, {
+"args": [  ],
+"method": "set_next_destination_index"
+}, {
+"args": [  ],
+"method": "set_next_destination_index"
+}, {
+"args": [  ],
+"method": "set_next_destination_index"
+}, {
+"args": [  ],
+"method": "set_next_destination_index"
+}, {
+"args": [  ],
+"method": "set_next_destination_index"
+}, {
+"args": [  ],
+"method": "set_next_destination_index"
+}, {
+"args": [  ],
+"method": "set_next_destination_index"
+}, {
+"args": [  ],
+"method": "set_next_destination_index"
+}, {
+"args": [  ],
+"method": "set_next_destination_index"
+}, {
+"args": [  ],
+"method": "set_next_destination_index"
+}, {
+"args": [  ],
+"method": "set_next_destination_index"
+}, {
+"args": [  ],
+"method": "set_next_destination_index"
+}, {
+"args": [  ],
+"method": "set_next_destination_index"
+} ]
+}
+tracks/4/type = "method"
+tracks/4/path = NodePath("Objects/Cutscene_Skeleton_4")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0.5, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"values": [ {
+"args": [ Vector2( 448, 384 ) ],
+"method": "set_destination"
+}, {
+"args": [  ],
+"method": "set_next_destination_index"
+}, {
+"args": [  ],
+"method": "set_next_destination_index"
+}, {
+"args": [  ],
+"method": "set_next_destination_index"
+}, {
+"args": [  ],
+"method": "set_next_destination_index"
+}, {
+"args": [  ],
+"method": "set_next_destination_index"
+}, {
+"args": [  ],
+"method": "set_next_destination_index"
+}, {
+"args": [  ],
+"method": "set_next_destination_index"
+}, {
+"args": [  ],
+"method": "set_next_destination_index"
+}, {
+"args": [  ],
+"method": "set_next_destination_index"
+}, {
+"args": [  ],
+"method": "set_next_destination_index"
+}, {
+"args": [  ],
+"method": "set_next_destination_index"
+}, {
+"args": [  ],
+"method": "set_next_destination_index"
+}, {
+"args": [  ],
+"method": "set_next_destination_index"
+}, {
+"args": [  ],
+"method": "set_next_destination_index"
+}, {
+"args": [  ],
+"method": "set_next_destination_index"
+} ]
+}
+tracks/5/type = "method"
+tracks/5/path = NodePath("Objects/Cutscene_42")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 5, 23, 29, 34 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"values": [ {
+"args": [ Vector2( 512, 256 ) ],
+"method": "set_destination"
+}, {
+"args": [ Vector2( 128, 384 ) ],
+"method": "set_destination"
+}, {
+"args": [ Vector2( 768, 512 ) ],
+"method": "set_destination"
+}, {
+"args": [ Vector2( 1152, 384 ) ],
+"method": "set_destination"
+} ]
+}
+tracks/6/type = "method"
+tracks/6/path = NodePath("Objects/CutsceneNecro")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 22, 28, 35 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"values": [ {
+"args": [ Vector2( 512, 256 ) ],
+"method": "set_destination"
+}, {
+"args": [ Vector2( 128, 384 ) ],
+"method": "set_destination"
+}, {
+"args": [ Vector2( 1152, 384 ) ],
+"method": "set_destination"
+} ]
+}
+
+[node name="Credits" type="Node2D"]
+script = ExtResource( 7 )
+
+[node name="Objects" type="YSort" parent="."]
+
+[node name="Walls" type="TileMap" parent="Objects"]
+light_mask = 3
+z_index = -1
+tile_set = SubResource( 9 )
+cell_tile_origin = 2
+cell_y_sort = true
+format = 1
+
+[node name="Ground" type="TileMap" parent="Objects"]
+light_mask = 3
+z_index = -1
+tile_set = SubResource( 13 )
+format = 1
+tile_data = PoolIntArray( 0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 6, 0, 0, 7, 0, 0, 8, 0, 0, 9, 0, 0, 10, 0, 0, 11, 0, 0, 12, 0, 0, 13, 0, 0, 14, 0, 0, 15, 0, 0, 65536, 0, 0, 65537, 0, 0, 65538, 0, 0, 65539, 0, 0, 65540, 0, 0, 65541, 0, 0, 65542, 0, 0, 65543, 0, 0, 65544, 0, 0, 65545, 0, 0, 65546, 0, 0, 65547, 0, 0, 65548, 0, 0, 65549, 0, 0, 65550, 0, 0, 65551, 0, 0, 131072, 0, 0, 131073, 0, 0, 131074, 0, 0, 131075, 0, 0, 131076, 0, 0, 131077, 0, 0, 131078, 0, 0, 131079, 0, 0, 131080, 0, 0, 131081, 0, 0, 131082, 0, 0, 131083, 0, 0, 131084, 0, 0, 131085, 0, 0, 131086, 0, 0, 131087, 0, 0, 196608, 0, 0, 196609, 0, 0, 196610, 0, 0, 196611, 0, 0, 196612, 0, 0, 196613, 0, 0, 196614, 0, 0, 196615, 0, 0, 196616, 0, 0, 196617, 0, 0, 196618, 0, 0, 196619, 0, 0, 196620, 0, 0, 196621, 0, 0, 196622, 0, 0, 196623, 0, 0, 262144, 0, 0, 262145, 0, 0, 262146, 0, 0, 262147, 0, 0, 262148, 0, 0, 262149, 0, 0, 262150, 0, 0, 262151, 0, 0, 262152, 0, 0, 262153, 0, 0, 262154, 0, 0, 262155, 0, 0, 262156, 0, 0, 262157, 0, 0, 262158, 0, 0, 262159, 0, 0, 327680, 0, 0, 327681, 0, 0, 327682, 0, 0, 327683, 0, 0, 327684, 0, 0, 327685, 0, 0, 327686, 0, 0, 327687, 0, 0, 327688, 0, 0, 327689, 0, 0, 327690, 0, 0, 327691, 0, 0, 327692, 0, 0, 327693, 0, 0, 327694, 0, 0, 327695, 0, 0, 393216, 0, 0, 393217, 0, 0, 393218, 0, 0, 393219, 0, 0, 393220, 0, 0, 393221, 0, 0, 393222, 0, 0, 393223, 0, 0, 393224, 0, 0, 393225, 0, 0, 393226, 0, 0, 393227, 0, 0, 393228, 0, 0, 393229, 0, 0, 393230, 0, 0, 393231, 0, 0, 458752, 0, 0, 458753, 0, 0, 458754, 0, 0, 458755, 0, 0, 458756, 0, 0, 458757, 0, 0, 458758, 0, 0, 458759, 0, 0, 458760, 0, 0, 458761, 0, 0, 458762, 0, 0, 458763, 0, 0, 458764, 0, 0, 458765, 0, 0, 458766, 0, 0, 458767, 0, 0, 524288, 0, 0, 524289, 0, 0, 524290, 0, 0, 524291, 0, 0, 524292, 0, 0, 524293, 0, 0, 524294, 0, 0, 524295, 0, 0, 524296, 0, 0, 524297, 0, 0, 524298, 0, 0, 524299, 0, 0, 524300, 0, 0, 524301, 0, 0, 524302, 0, 0, 524303, 0, 0 )
+
+[node name="CutsceneKevin" parent="Objects" instance=ExtResource( 9 )]
+position = Vector2( -56, 112 )
+mute = true
+
+[node name="Cutscene_Skeleton_1" parent="Objects" instance=ExtResource( 10 )]
+position = Vector2( 1104, 72 )
+_destinations_index = 1
+mute = true
+
+[node name="Cutscene_Skeleton_2" parent="Objects" instance=ExtResource( 10 )]
+position = Vector2( 104, -80 )
+_destinations_index = 4
+mute = true
+
+[node name="Cutscene_Skeleton_3" parent="Objects" instance=ExtResource( 10 )]
+position = Vector2( -152, 528 )
+_destinations_index = 2
+mute = true
+
+[node name="Cutscene_Skeleton_4" parent="Objects" instance=ExtResource( 10 )]
+position = Vector2( 1088, 504 )
+_destinations_index = 3
+mute = true
+
+[node name="Cutscene_42" parent="Objects" instance=ExtResource( 11 )]
+position = Vector2( 808, -64 )
+mute = true
+
+[node name="CutsceneNecro" parent="Objects" instance=ExtResource( 12 )]
+position = Vector2( 1200, 512 )
+
+[node name="GoUp" type="Node2D" parent="."]
+position = Vector2( 8, 192 )
+
+[node name="TitleSprite" type="Sprite" parent="GoUp"]
+position = Vector2( 512, 96 )
+texture = ExtResource( 5 )
+hframes = 3
+frame = 2
+
+[node name="Label" type="Label" parent="GoUp"]
+margin_left = 80.0
+margin_top = 400.0
+margin_right = 514.0
+margin_bottom = 426.0
+text = "Programming & Music - Gabriele P. (cornacchia)"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="GoUp"]
+margin_left = 600.0
+margin_top = 400.0
+margin_right = 1034.0
+margin_bottom = 426.0
+text = "Art & Graphics - Jacopo F."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label3" type="Label" parent="GoUp"]
+margin_left = 80.0
+margin_top = 456.0
+margin_right = 792.0
+margin_bottom = 511.0
+text = "Inspired by a Player Character in our ongoing Monster Of The Week campaign
+https://www.evilhat.com/home/monster-of-the-week/"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label4" type="Label" parent="GoUp"]
+margin_left = 80.0
+margin_top = 544.0
+margin_right = 792.0
+margin_bottom = 570.0
+text = "All sound effects from OpenGameArt (https://opengameart.org/):"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label5" type="Label" parent="GoUp"]
+margin_left = 80.0
+margin_top = 576.0
+margin_right = 896.0
+margin_bottom = 834.0
+text = "https://opengameart.org/content/horror-sound-effects-library
+https://opengameart.org/content/thunder-rain-and-wind
+https://opengameart.org/content/15-monster-gruntpaindeath-sounds
+https://opengameart.org/content/75-cc0-breaking-falling-hit-sfx
+https://opengameart.org/content/chaingun-pistol-rifle-shotgun-shots
+https://opengameart.org/content/foot-walking-step-sounds-on-stone-water-snow-wood-and-dirt
+https://opengameart.org/content/rpg-sound-pack
+https://opengameart.org/content/mech-stomp-step-sound
+https://opengameart.org/content/crow-caw"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label6" type="Label" parent="GoUp"]
+margin_left = 80.0
+margin_top = 872.0
+margin_right = 896.0
+margin_bottom = 904.0
+text = "Fog Shader taken from a tutorial by Gonkee: https://github.com/Gonkee/Gonkees-Shaders "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label7" type="Label" parent="GoUp"]
+margin_left = 80.0
+margin_top = 936.0
+margin_right = 896.0
+margin_bottom = 991.0
+text = "Rain particle effects taken from a tutorial by TheBuffED:
+https://www.youtube.com/channel/UCUrmX3SvpPerq-KAfGBrgGQ"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label8" type="Label" parent="GoUp"]
+margin_left = 80.0
+margin_top = 1064.0
+margin_right = 896.0
+margin_bottom = 1096.0
+text = "Font by @somepx: https://somepx.itch.io/humble-fonts-gold"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label9" type="Label" parent="GoUp"]
+margin_left = 80.0
+margin_top = 1128.0
+margin_right = 896.0
+margin_bottom = 1160.0
+text = "This is it."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label10" type="Label" parent="GoUp"]
+margin_left = 80.0
+margin_top = 1192.0
+margin_right = 896.0
+margin_bottom = 1224.0
+text = "Burn the rich, not the witch!"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label11" type="Label" parent="GoUp"]
+margin_left = 80.0
+margin_top = 1016.0
+margin_right = 896.0
+margin_bottom = 1048.0
+text = "Useful pixel art tutorials: https://www.slynyrd.com/"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CreditsSong" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 8 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/cutscene = SubResource( 14 )
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 39.0
+one_shot = true
+[connection signal="finished" from="CreditsSong" to="." method="_on_CreditsSong_finished"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

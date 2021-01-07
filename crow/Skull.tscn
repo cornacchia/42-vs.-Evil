@@ -1,0 +1,122 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://crow/corvo.png" type="Texture" id=1]
+[ext_resource path="res://crow/Skull.gd" type="Script" id=2]
+[ext_resource path="res://crow/explodemini.wav" type="AudioStream" id=3]
+
+[sub_resource type="Animation" id=1]
+resource_name = "base"
+length = 1.2
+loop = true
+step = 0.2
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ Vector2( 0, 2 ), Vector2( 1, 2 ), Vector2( 2, 2 ), Vector2( 3, 2 ), Vector2( 4, 2 ), Vector2( 5, 2 ) ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "explode"
+length = 0.6
+step = 0.2
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ Vector2( 0, 6 ), Vector2( 2, 6 ), Vector2( 3, 6 ), Vector2( 4, 6 ), Vector2( 5, 6 ) ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath("../Explode")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.1 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ 0.0 ],
+"method": "play"
+} ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("../HurtBox:monitoring")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.1, 0.55 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+
+[sub_resource type="CircleShape2D" id=3]
+radius = 43.7057
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 6.06893, 7.40062 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 3.54333, 3.89291 )
+
+[node name="Skull" type="KinematicBody2D"]
+collision_layer = 1024
+collision_mask = 0
+script = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 0, -8 )
+texture = ExtResource( 1 )
+vframes = 7
+hframes = 6
+frame = 36
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite"]
+anims/base = SubResource( 1 )
+anims/explode = SubResource( 2 )
+
+[node name="ExplosionTimer" type="Timer" parent="."]
+one_shot = true
+
+[node name="HurtBox" type="Area2D" parent="."]
+monitoring = false
+collision_layer = 0
+collision_mask = 1024
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox"]
+position = Vector2( 0, -16 )
+shape = SubResource( 3 )
+
+[node name="HitBox" type="Area2D" parent="." groups=[
+"hitbox",
+]]
+collision_layer = 1024
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
+shape = SubResource( 4 )
+
+[node name="Explode" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 3 )
+
+[node name="WallCollision" type="CollisionShape2D" parent="."]
+shape = SubResource( 5 )
+[connection signal="animation_finished" from="Sprite/AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]
+[connection signal="timeout" from="ExplosionTimer" to="." method="_on_ExplosionTimer_timeout"]
+[connection signal="area_shape_entered" from="HurtBox" to="." method="_on_HurtBox_area_shape_entered"]
+[connection signal="finished" from="Explode" to="." method="_on_Explode_finished"]

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/shade8.wav-2616abc6e267c16de5de32e08d3b0e44.sample"
+
+[deps]
+
+source_file="res://ghost/shade8.wav"
+dest_files=[ "res://.import/shade8.wav-2616abc6e267c16de5de32e08d3b0e44.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

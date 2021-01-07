@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://tomb/TombFront.tscn" type="PackedScene" id=1]
+[ext_resource path="res://tomb/TombBack.gd" type="Script" id=2]
+
+[node name="TombBack" instance=ExtResource( 1 )]
+light_mask = 3
+script = ExtResource( 2 )
+
+[node name="Ground" parent="." index="0"]
+position = Vector2( 16, -16 )
+
+[node name="Tomb" parent="." index="1"]
+frame = 30
+
+[node name="CollisionShape2D" parent="." index="2"]
+position = Vector2( 16, 0 )

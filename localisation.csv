@@ -1,0 +1,73 @@
+keys,it,en
+ONE_LINER_1,Ho ho ho! Sono Babbo NatAle!,Bone appetit!
+ONE_LINER_2,Non sei più così un osso duro!,"I'm Moulder, you're Skully!"
+ONE_LINER_3,42 sfumature di distruzione!,42 shades of destruction!
+ONE_LINER_4,Hai il cranio duro.. Ma le mie pallottole sono più dure!,Rest in lead!
+ONE_LINER_5,klaatu ve?#ata nicto!,klaatu ve?#ata nicto!
+ONE_LINER_6,"Tieni, smidollato!",Skelewhat now?
+ONE_LINER_7,Non mi sento mOsso a pietà,I'll give you a skeleTon of bullets!
+ONE_LINER_8,"Se aveste sangue, sarebbe di colore rOsso?",Are you feeling well? You look pale!
+ONE_LINER_9,Tibiace il mio piombo?,Ho ho ho! I'm Gunta claus!
+ONE_LINER_10,Stai male? Ti vedo un po' pallido,I'm Gunna shoot me some bones!
+ONE_LINER_11,Il mio proiettile ti ha percOsso!,Yipee ki yay motherSkullers!
+ONE_LINER_12,POsso farti a pezzi? Ops.. l'ho appena fatto!,Are you angry? You look grave!
+ONE_LINER_13,Mangia un po' di piombo! Sei tutto ossa!,"Eat some bullets, you are all bones!"
+S1_42_1,Corpo di mille balene!,Well here I am!
+S1_42_2,Dove sono i mostri da uccidere?!,Where are all the damn monsters?!
+S1_42_3,Pfft! Scommetto che questa missione sarà una bazzeccola!,"Tsk, I bet this will be a piece of cake!"
+S1_42_4,Oh oh..,...dammit
+S2_SK_1,"Kevin, cos'hai mangiato per cena?","Hey, Kevin, what did you have for dinner?"
+S2_KEV_1,Una batteria..,A battery..
+S2_SK_2,Cosa?! Perché?!,What?! Why?!
+S2_KEV_2,Mi serviva una carica!,I needed a charge!
+S3_KEV_1,Ma l'hai visto quello spettro? Tutto borioso e pieno di sè!,Have you seen that ghost? So full of himself!
+S3_KEV_2,"Oh, guardatemi, passo attraverso i muri!",Uh! Look at me: I can float through walls!
+S3_SK_1,Kevin...,Kevin...
+S3_KEV_3,Ho un mucchietto di ossa che spara croci infuocate!,My bones shoot flaming crosses!
+S3_SK_2,Kevin..!,Kevin..!
+S3_KEV_4,Ho ancora una di quelle croci incastrate sul calcagno!,I still have one of those damn crosses in my foot!
+S3_SK_3,Kevin!,Kevin!
+S3_KEV_5,Che c'è?!,What?!
+S3_KEV_6,Ah... è dietro di me vero?,"Ah... he's right behind me, right?"
+S3_SK_4,Già..,Yup..
+S3_KEV_7,Aaaaaaaah!,Aaaaaaaah!
+S2_42_1,"Ah, che mal di testa! Ma quanto ho bevuto?","Urmf, I'm so hungover, how much did I drink?"
+S2_42_2,Mi sa che comincio a vederci doppio!,I'm starting to see double!
+S2_43_1,Hei brutta faccia!,Hey ugly!
+S2_42_3,AAAAAAAAH!,AAAAAAAAH!
+PAUSED,Pausa,Paused
+BACK_TO_MENU,Torna al menu,Back to start menu
+RESTART,Riavvia livello,Restart level
+B1_B_1,Concentrate tutto il vostro essere,Focus your whole being
+B1_B_2,La vostra energia è una palla luminosa,Your energy is a ball of light
+B1_B_3,E... kyah!,And... kyah!
+B1_KEV_1,Ma che..,What the f..
+B1_B_4,Ancora una volta... kyah!,Again... kyah!
+B1_KEV_2,Sticazzi vado a cercare qualcosa da bere!,Fuck it I'm going to find something to drink!
+B2_B_1,Ma..!,What..?!
+B2_B_2,Qui mancano 5 bottiglie di vino!,5 bottles are missing!
+B2_B_3,Chi è stato a prenderle?!,Who took them?!
+B2_KEV_1,Uiiiiiiiiiiiiiiiii!!!!,Yayyyyyyyyyyyyy!!!!
+B3_KEV_1,Fermo! Non mi sparare!,Stop! Don't shoot me!
+B3_42_1,Cosa? E perché?,What? Why?
+B3_KEV_2,Perché io sono la tua animaaaaaaaaaa...!,Because I'm your sooooooouuul...!
+B3_42_2,...,...
+B3_KEV_3,Va bé comunque l'ultimo cialtrone da uccidere è la dietro,"Whatever, btw the last prick to kill is right there"
+B3_B_1,Madonna quanto odio Kevin...,Man I fucking hate Kevin...
+F_KEV_1,Uff è finita!,"Phew, It's over!"
+F_42_1,Non che tu abbia aiutato!,You weren't much help!
+F_KEV_2,Sì invece! Sono stato la tua musa!,I was! I'm your muse!
+F_42_2,Se vabbè.. che facciamo adesso?,Yeah whatever man.. so what should we do now?
+F_KEV_3,Non saprei.. andiamo al bar?,I don't know.. pub?
+F_42_3,"Sì dai, ho proprio voglia di bere qualcosa","Yeah why not, I need a drink"
+F_B_1,A chi lo dici...,Don't tell me man...
+END,Fine?,The end?
+MOVE,Spostati usando le frecce direzionali o WASD,Move with the arrow keys or WASD
+SHOOT,CTRL o BARRA SPAZIO per sparare,Shoot with CTRL or SPACE BAR
+HEALTH,"Le bottiglie di vino fanno recuperare parte della vita, tuttavia ti ubriacano!",Wine bottles restore some health but also get you drunk!
+BATTERY,"La torcia di 42 perde potere continuamente, le batterie la ricaricano","Your torch will lose energy, use batteries to recharge it!"
+STEEL_KEY,Per terminare il livello trova la chiave di metallo ed esci dal cancello a nord,To terminate a level find the steel key and exit through the north gate
+GOLD_KEY,Per entrare nelle cripte trova le chiavi d'oro nascoste nella mappa,To enter the crypt find the hidden gold key
+START,CTRL o BARRA SPAZIO per iniziare!,Press CTRL or SPACE BAR to start!
+DEAD,Sei morto,You are dead
+PAUSE_INFO,Premi ESC per mettere in pausa,Use ESC to pause the game

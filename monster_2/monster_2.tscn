@@ -1,0 +1,39 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://monster_1/monster_1.tscn" type="PackedScene" id=1]
+[ext_resource path="res://monster_2/monster_2.gd" type="Script" id=2]
+[ext_resource path="res://monster_2/scheletro_scudo_spritesheet.png" type="Texture" id=3]
+
+[node name="monster_2" instance=ExtResource( 1 )]
+script = ExtResource( 2 )
+
+[node name="Sprite" parent="." index="0"]
+texture = ExtResource( 3 )
+offset = Vector2( -8, 0 )
+frame = 67
+
+[node name="ShieldHitBox" type="Area2D" parent="." index="7" groups=[
+"bounce",
+]]
+priority = 2.0
+collision_layer = 1024
+collision_mask = 0
+
+[node name="Normal" type="CollisionPolygon2D" parent="ShieldHitBox" index="0"]
+polygon = PoolVector2Array( 0.995331, -21.059, -20.7203, -21.2817, -20.943, 0.211205, -17.9363, 6.22477, -11.7, 9.23155, -7.02276, 8.89746, -2.23418, 4.77706, -0.118294, -0.234245 )
+disabled = true
+
+[node name="Raise" type="CollisionPolygon2D" parent="ShieldHitBox" index="1"]
+polygon = PoolVector2Array( -6.07541, -21.7136, -24.8042, -31.6398, -35.9479, -11.4127, -34.2623, -3.17201, -28.0818, 1.79113, -20.4966, 1.5102, -14.1288, -3.07837 )
+disabled = true
+
+[node name="Attack_1" type="CollisionPolygon2D" parent="ShieldHitBox" index="2"]
+polygon = PoolVector2Array( -14.9698, -15.6077, -36.8958, -15.9053, -37.1935, 5.92144, -28.8596, 13.7592, -22.0139, 13.9577, -15.6643, 9.79073 )
+disabled = true
+
+[node name="Attack_2" type="CollisionPolygon2D" parent="ShieldHitBox" index="3"]
+polygon = PoolVector2Array( -11.2208, -4.83452, -30.7092, 4.51992, -18.9048, 26.5697, -9.9958, 29.131, -3.20269, 24.8992, -0.084549, 19.9993, -1.86634, 9.86531 )
+
+[node name="Attack_3" type="CollisionPolygon2D" parent="ShieldHitBox" index="4"]
+polygon = PoolVector2Array( -8.10263, -11.8503, -27.591, -12.0731, -27.0342, 9.97667, -18.4593, 18.2175, -12.6685, 18.2175, -6.76629, 10.7562 )
+disabled = true

@@ -1,0 +1,21 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://menu/pulsanti.png" type="Texture" id=1]
+
+[node name="Button" type="Control"]
+anchor_left = -0.062
+anchor_top = -0.028
+anchor_right = 0.062
+anchor_bottom = 0.028
+margin_left = 63.488
+margin_top = 16.128
+margin_right = -63.488
+margin_bottom = -16.128
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+vframes = 8
+hframes = 3

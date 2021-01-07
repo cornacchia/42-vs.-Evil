@@ -1,0 +1,49 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://tomb/ostacoli.png" type="Texture" id=1]
+[ext_resource path="res://tomb/TombFront.gd" type="Script" id=2]
+[ext_resource path="res://tomb/rock_break.ogg" type="AudioStream" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 7.08232, 3.80815 )
+
+[node name="TombFront" type="StaticBody2D"]
+collision_layer = 0
+collision_mask = 32
+script = ExtResource( 2 )
+
+[node name="Ground" type="Sprite" parent="."]
+light_mask = 3
+position = Vector2( 16, 16 )
+z_index = -1
+texture = ExtResource( 1 )
+vframes = 6
+hframes = 10
+frame = 9
+
+[node name="Tomb" type="Sprite" parent="."]
+light_mask = 3
+position = Vector2( 16, -16 )
+texture = ExtResource( 1 )
+vframes = 6
+hframes = 10
+frame = 40
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 15.8331, -1.02455 )
+shape = SubResource( 1 )
+
+[node name="HitBox" type="Area2D" parent="." groups=[
+"hitbox",
+]]
+priority = 1.0
+collision_layer = 1024
+collision_mask = 0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="HitBox"]
+build_mode = 1
+polygon = PoolVector2Array( 2.77209, 6.55106, 2.70588, -21.7234, 10.8195, -29.9263, 20.9977, -29.9263, 29.3249, -21.6571, 29.1925, 6.41863 )
+
+[node name="HitSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 3 )
+volume_db = 1.0

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Laugh_Evil_01.wav-2e246e30c1b11f34620f3515bd092d2a.sample"
+
+[deps]
+
+source_file="res://necromancer/Laugh_Evil_01.wav"
+dest_files=[ "res://.import/Laugh_Evil_01.wav-2e246e30c1b11f34620f3515bd092d2a.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

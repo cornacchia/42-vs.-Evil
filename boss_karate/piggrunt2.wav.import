@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/piggrunt2.wav-33874dc087adfc1b7ad249bfbf9b4610.sample"
+
+[deps]
+
+source_file="res://boss_karate/piggrunt2.wav"
+dest_files=[ "res://.import/piggrunt2.wav-33874dc087adfc1b7ad249bfbf9b4610.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

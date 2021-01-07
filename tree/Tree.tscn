@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://tree/alberi.png" type="Texture" id=1]
+[ext_resource path="res://tree/Tree.gd" type="Script" id=2]
+
+[node name="Tree" type="StaticBody2D"]
+light_mask = 0
+script = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 64, -48 )
+texture = ExtResource( 1 )
+vframes = 2
+hframes = 2
+frame = 1
+
+[node name="CollisionTree0" type="CollisionPolygon2D" parent="."]
+position = Vector2( 64, -16 )
+polygon = PoolVector2Array( -15.7279, 6.69454, -6.0052, -3.02818, 15.208, -3.20495, 9.55115, 9.52297 )
+
+[node name="CollisionTree1" type="CollisionPolygon2D" parent="."]
+position = Vector2( 64, -16 )
+polygon = PoolVector2Array( -14.4905, 16.4173, -18.3796, 5.63388, 4.60139, 3.15901, 9.37437, 14.4727 )
+disabled = true

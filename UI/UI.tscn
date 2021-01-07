@@ -1,0 +1,132 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://UI/UI.gd" type="Script" id=1]
+[ext_resource path="res://UI/UI.tres" type="StyleBox" id=3]
+[ext_resource path="res://UI/UI_hover.tres" type="StyleBox" id=4]
+[ext_resource path="res://UI/42_head.png" type="Texture" id=5]
+[ext_resource path="res://key/chiavi.png" type="Texture" id=7]
+[ext_resource path="res://salute_blasfemia.png" type="Texture" id=8]
+
+[sub_resource type="Animation" id=1]
+resource_name = "smoke"
+length = 0.4
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ Vector2( 0, 0 ), Vector2( 1, 0 ) ]
+}
+
+[node name="UI" type="CanvasLayer"]
+pause_mode = 2
+script = ExtResource( 1 )
+
+[node name="42_Head" type="Sprite" parent="."]
+position = Vector2( 40, 24 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 5 )
+hframes = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="42_Head"]
+anims/smoke = SubResource( 1 )
+
+[node name="Blasphemy" type="Sprite" parent="."]
+position = Vector2( 256, 40 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 8 )
+vframes = 11
+hframes = 2
+frame = 1
+
+[node name="SteelKey" type="Sprite" parent="."]
+visible = false
+position = Vector2( 640, 24 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 7 )
+hframes = 2
+
+[node name="GoldKey" type="Sprite" parent="."]
+visible = false
+position = Vector2( 688, 24 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 7 )
+hframes = 2
+frame = 1
+
+[node name="Health" type="Sprite" parent="."]
+position = Vector2( 136, 32 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 8 )
+vframes = 11
+hframes = 2
+
+[node name="GhostLabel" type="Label" parent="."]
+margin_left = 288.0
+margin_top = 8.0
+margin_right = 376.0
+margin_bottom = 59.0
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PausedLabel" type="Label" parent="."]
+visible = false
+margin_left = 384.0
+margin_top = 160.0
+margin_right = 608.0
+margin_bottom = 232.0
+text = "PAUSED"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DeadLabel" type="Label" parent="."]
+visible = false
+margin_left = 384.0
+margin_top = 160.0
+margin_right = 608.0
+margin_bottom = 232.0
+text = "DEAD"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BackToMenu" type="Button" parent="."]
+visible = false
+margin_left = 384.0
+margin_top = 232.0
+margin_right = 396.0
+margin_bottom = 252.0
+custom_styles/hover = ExtResource( 4 )
+custom_styles/normal = ExtResource( 3 )
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 1, 0, 0, 1 )
+text = "BACK_TO_MENU"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RestartLevel" type="Button" parent="."]
+visible = false
+margin_left = 384.0
+margin_top = 280.0
+margin_right = 462.0
+margin_bottom = 312.0
+custom_styles/hover = ExtResource( 4 )
+custom_styles/normal = ExtResource( 3 )
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 1, 0, 0, 1 )
+text = "RESTART"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="BackToMenu" to="." method="_on_BackToMenu_pressed"]
+[connection signal="pressed" from="RestartLevel" to="." method="_on_RestartLevel_pressed"]

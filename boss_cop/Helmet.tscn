@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://boss_cop/scheletro sbirro spritesheet.png" type="Texture" id=1]
+[ext_resource path="res://boss_cop/Helmet.gd" type="Script" id=2]
+
+[node name="Helmet" type="Node2D"]
+scale = Vector2( 2.5, 2.5 )
+script = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 8, 16 )
+texture = ExtResource( 1 )
+vframes = 32
+hframes = 10
+frame = 94

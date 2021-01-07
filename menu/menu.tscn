@@ -1,0 +1,258 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://menu/menu.gd" type="Script" id=1]
+[ext_resource path="res://SinsGold.ttf" type="DynamicFontData" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+size = 32
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 32
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 64
+font_data = ExtResource( 2 )
+
+[node name="menu" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="Mappa_1" type="Button" parent="."]
+margin_left = 256.0
+margin_top = 128.0
+margin_right = 338.0
+margin_bottom = 160.0
+custom_fonts/font = SubResource( 1 )
+text = "MAPPA 1"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Mappa_2" type="Button" parent="."]
+margin_left = 384.0
+margin_top = 128.0
+margin_right = 468.0
+margin_bottom = 160.0
+custom_fonts/font = SubResource( 1 )
+text = "MAPPA 2"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Mappa_3" type="Button" parent="."]
+margin_left = 512.0
+margin_top = 128.0
+margin_right = 596.0
+margin_bottom = 160.0
+custom_fonts/font = SubResource( 1 )
+text = "MAPPA 3"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Puzzle_4" type="Button" parent="."]
+margin_left = 256.0
+margin_top = 432.0
+margin_right = 366.0
+margin_bottom = 464.0
+custom_fonts/font = SubResource( 1 )
+text = "PUZZLE 1v2"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Puzzle_5" type="Button" parent="."]
+margin_left = 384.0
+margin_top = 432.0
+margin_right = 496.0
+margin_bottom = 464.0
+custom_fonts/font = SubResource( 1 )
+text = "PUZZLE 2v2"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Puzzle_6" type="Button" parent="."]
+margin_left = 512.0
+margin_top = 432.0
+margin_right = 624.0
+margin_bottom = 464.0
+custom_fonts/font = SubResource( 1 )
+text = "PUZZLE 3v2"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Lang_IT" type="Button" parent="."]
+margin_left = 24.0
+margin_top = 16.0
+margin_right = 106.0
+margin_bottom = 48.0
+custom_fonts/font = SubResource( 1 )
+text = "IT"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Lang_EN" type="Button" parent="."]
+margin_left = 24.0
+margin_top = 56.0
+margin_right = 106.0
+margin_bottom = 88.0
+custom_fonts/font = SubResource( 1 )
+text = "EN"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Boss_1" type="Button" parent="."]
+margin_left = 256.0
+margin_top = 192.0
+margin_right = 326.0
+margin_bottom = 224.0
+custom_fonts/font = SubResource( 2 )
+text = "BOSS 1"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Boss_2" type="Button" parent="."]
+margin_left = 384.0
+margin_top = 192.0
+margin_right = 456.0
+margin_bottom = 224.0
+custom_fonts/font = SubResource( 2 )
+text = "BOSS 2"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Boss_3" type="Button" parent="."]
+margin_left = 512.0
+margin_top = 192.0
+margin_right = 584.0
+margin_bottom = 224.0
+custom_fonts/font = SubResource( 2 )
+text = "BOSS 3"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Cutscene_1" type="Button" parent="."]
+margin_left = 256.0
+margin_top = 256.0
+margin_right = 364.0
+margin_bottom = 288.0
+custom_fonts/font = SubResource( 2 )
+text = "CUTSCENE 1"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Cutscene_2" type="Button" parent="."]
+margin_left = 384.0
+margin_top = 256.0
+margin_right = 494.0
+margin_bottom = 288.0
+custom_fonts/font = SubResource( 2 )
+text = "CUTSCENE 2"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Cutscene_3" type="Button" parent="."]
+margin_left = 512.0
+margin_top = 256.0
+margin_right = 622.0
+margin_bottom = 288.0
+custom_fonts/font = SubResource( 2 )
+text = "CUTSCENE 3"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Cutscene_4" type="Button" parent="."]
+margin_left = 256.0
+margin_top = 312.0
+margin_right = 366.0
+margin_bottom = 344.0
+custom_fonts/font = SubResource( 2 )
+text = "CUTSCENE 4"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Cutscene_5" type="Button" parent="."]
+margin_left = 384.0
+margin_top = 312.0
+margin_right = 494.0
+margin_bottom = 344.0
+custom_fonts/font = SubResource( 2 )
+text = "CUTSCENE 5"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Cutscene_6" type="Button" parent="."]
+margin_left = 512.0
+margin_top = 312.0
+margin_right = 622.0
+margin_bottom = 344.0
+custom_fonts/font = SubResource( 2 )
+text = "CUTSCENE 6"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Cutscene_7" type="Button" parent="."]
+margin_left = 256.0
+margin_top = 368.0
+margin_right = 366.0
+margin_bottom = 400.0
+custom_fonts/font = SubResource( 2 )
+text = "CUTSCENE 7"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Cutscene_8" type="Button" parent="."]
+margin_left = 384.0
+margin_top = 368.0
+margin_right = 494.0
+margin_bottom = 400.0
+custom_fonts/font = SubResource( 2 )
+text = "INSTRUCTIONS"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = 408.0
+margin_top = 32.0
+margin_right = 604.0
+margin_bottom = 83.0
+custom_fonts/font = SubResource( 3 )
+text = "42 VS EVIL"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="Mappa_1" to="." method="_on_Mappa_1_pressed"]
+[connection signal="pressed" from="Mappa_2" to="." method="_on_Mappa_2_pressed"]
+[connection signal="pressed" from="Mappa_3" to="." method="_on_Mappa_3_pressed"]
+[connection signal="pressed" from="Puzzle_4" to="." method="_on_Puzzle_4_pressed"]
+[connection signal="pressed" from="Puzzle_5" to="." method="_on_Puzzle_5_pressed"]
+[connection signal="pressed" from="Puzzle_6" to="." method="_on_Puzzle_6_pressed"]
+[connection signal="pressed" from="Lang_IT" to="." method="_on_Lang_IT_pressed"]
+[connection signal="pressed" from="Lang_EN" to="." method="_on_Lang_EN_pressed"]
+[connection signal="pressed" from="Boss_1" to="." method="_on_Boss_1_pressed"]
+[connection signal="pressed" from="Boss_2" to="." method="_on_Boss_2_pressed"]
+[connection signal="pressed" from="Boss_3" to="." method="_on_Boss_3_pressed"]
+[connection signal="pressed" from="Cutscene_1" to="." method="_on_Cutscene_1_pressed"]
+[connection signal="pressed" from="Cutscene_2" to="." method="_on_Cutscene_2_pressed"]
+[connection signal="pressed" from="Cutscene_3" to="." method="_on_Cutscene_3_pressed"]
+[connection signal="pressed" from="Cutscene_4" to="." method="_on_Cutscene_4_pressed"]
+[connection signal="pressed" from="Cutscene_5" to="." method="_on_Cutscene_5_pressed"]
+[connection signal="pressed" from="Cutscene_6" to="." method="_on_Cutscene_6_pressed"]
+[connection signal="pressed" from="Cutscene_7" to="." method="_on_Cutscene_7_pressed"]
+[connection signal="pressed" from="Cutscene_8" to="." method="_on_Cutscene_8_pressed"]

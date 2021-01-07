@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://monster_1/monster_1.tscn" type="PackedScene" id=1]
+[ext_resource path="res://boss_1/boss_1.gd" type="Script" id=2]
+
+[node name="boss_1" instance=ExtResource( 1 )]
+scale = Vector2( 3, 3 )
+script = ExtResource( 2 )

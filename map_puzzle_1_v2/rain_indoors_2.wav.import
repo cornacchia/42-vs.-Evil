@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/rain_indoors_2.wav-5a9c34139e1114bd547d180c7b9e7218.sample"
+
+[deps]
+
+source_file="res://map_puzzle_1_v2/rain_indoors_2.wav"
+dest_files=[ "res://.import/rain_indoors_2.wav-5a9c34139e1114bd547d180c7b9e7218.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=false
+edit/loop=true
+compress/mode=0

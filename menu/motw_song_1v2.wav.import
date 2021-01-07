@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/motw_song_1v2.wav-094cfb6a05245499a06bb191cfc6ce53.sample"
+
+[deps]
+
+source_file="res://menu/motw_song_1v2.wav"
+dest_files=[ "res://.import/motw_song_1v2.wav-094cfb6a05245499a06bb191cfc6ce53.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

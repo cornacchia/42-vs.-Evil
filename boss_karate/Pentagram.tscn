@@ -1,0 +1,52 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://boss_karate/scheletro_karate_spritesheet.png" type="Texture" id=1]
+[ext_resource path="res://boss_karate/Pentagram.gd" type="Script" id=2]
+[ext_resource path="res://42/light.png" type="Texture" id=3]
+[ext_resource path="res://boss_karate/warp2.ogg" type="AudioStream" id=4]
+
+[sub_resource type="Animation" id=1]
+resource_name = "spawn"
+length = 0.8
+step = 0.2
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ Vector2( 0, 18 ), Vector2( 1, 18 ), Vector2( 2, 18 ), Vector2( 3, 18 ) ]
+}
+
+[node name="Pentagram" type="StaticBody2D"]
+scale = Vector2( 15, 15 )
+z_index = -1
+script = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 0, -16 )
+texture = ExtResource( 1 )
+vframes = 28
+hframes = 10
+frame = 180
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite"]
+anims/spawn = SubResource( 1 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+build_mode = 1
+polygon = PoolVector2Array( -3, -8.53333, 1.93333, -8.53333, 7.26667, -2.96667, 7.43333, 1.96667, 1.96667, 7.53333, -3, 7.56667, -8.76667, 1.83333, -8.66667, -2.93333 )
+disabled = true
+
+[node name="Light2D" type="Light2D" parent="."]
+enabled = false
+texture = ExtResource( 3 )
+color = Color( 0.639216, 0.0235294, 0.984314, 1 )
+
+[node name="Activate" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 4 )
+[connection signal="animation_finished" from="Sprite/AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]

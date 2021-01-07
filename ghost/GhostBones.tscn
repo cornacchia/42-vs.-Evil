@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://ghost/fantasma_spritesheet.png" type="Texture" id=1]
+[ext_resource path="res://ghost/shade5.wav" type="AudioStream" id=2]
+[ext_resource path="res://ghost/GhostBones.gd" type="Script" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 12.5045, 10 )
+
+[node name="GhostBones" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 0, -24 )
+texture = ExtResource( 1 )
+vframes = 5
+hframes = 4
+frame = 16
+
+[node name="HitBox" type="Area2D" parent="." groups=[
+"hitbox",
+]]
+collision_layer = 1024
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
+position = Vector2( -0.630676, -5.04538 )
+shape = SubResource( 1 )
+
+[node name="HitSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 2 )

@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://cutscenes/kevin_spritesheet.png" type="Texture" id=1]
+[ext_resource path="res://cutscenes/Arm.gd" type="Script" id=2]
+
+[node name="Arm" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( -24, 16 )
+texture = ExtResource( 1 )
+vframes = 14
+hframes = 10
+frame = 115

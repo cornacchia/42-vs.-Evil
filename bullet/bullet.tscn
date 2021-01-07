@@ -1,0 +1,93 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://bullet/proiettili.png" type="Texture" id=1]
+[ext_resource path="res://bullet/bullet.gd" type="Script" id=2]
+[ext_resource path="res://bullet/clink2.wav" type="AudioStream" id=3]
+
+[sub_resource type="Animation" id=1]
+resource_name = "fly"
+length = 0.3
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 2, 0 ), Vector2( 3, 0 ), Vector2( 4, 0 ) ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "hit"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 5, 0 ), Vector2( 6, 0 ) ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "spawn"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ Vector2( 0, 0 ), Vector2( 1, 0 ), Vector2( 2, 0 ) ]
+}
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 6.76797, 2.21205 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 8.18624, 3.12975 )
+
+[node name="bullet" type="KinematicBody2D" groups=[
+"bullets",
+]]
+collision_mask = 0
+script = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+vframes = 2
+hframes = 7
+frame = 4
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite"]
+anims/fly = SubResource( 1 )
+anims/hit = SubResource( 2 )
+anims/spawn = SubResource( 3 )
+
+[node name="WallCollision" type="CollisionShape2D" parent="."]
+shape = SubResource( 4 )
+
+[node name="Area2D" type="Area2D" parent="."]
+priority = 1.0
+collision_layer = 0
+collision_mask = 1024
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource( 5 )
+
+[node name="HitShield" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 3 )
+[connection signal="animation_finished" from="Sprite/AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]
+[connection signal="area_shape_entered" from="Area2D" to="." method="_on_area_shape_entered"]

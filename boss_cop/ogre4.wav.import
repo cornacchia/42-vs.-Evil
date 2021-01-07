@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/ogre4.wav-4dce6e46a16ef02b59b62cac785ba8bb.sample"
+
+[deps]
+
+source_file="res://boss_cop/ogre4.wav"
+dest_files=[ "res://.import/ogre4.wav-4dce6e46a16ef02b59b62cac785ba8bb.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
